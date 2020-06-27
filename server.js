@@ -10,18 +10,6 @@ const app= express();
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-//  --------------------- Give user the html files when the corresponding link is typed --------------------------------
-
-// This will send the files to the user when they load the page
-// with the particular 
-app.get('/', function(request, response) {
-    response.sendFile(path.join(__dirname, 'index.html'))
-})
-
-
-
-
-
 
 // --------------------- Shows link in terminal -----------------------------
 
