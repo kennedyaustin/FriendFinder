@@ -19,100 +19,91 @@
 
 <body>
 
-  <nav class='navbar navbar-expand-lg navbar-light bg-light'>
-    <a class='navbar-brand' href='#'>Navbar</a>
-    <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
-      <span class='navbar-toggler-icon'></span>
-    </button>
-    <div class='collapse navbar-collapse' id='navbarNav'>
-      <ul class='navbar-nav ml-auto'>
-        <li class='nav-item active'>
-          <a class='nav-link' href='https://my-friend-finder-app27.herokuapp.com/'>Home <span class='sr-only'>(current)</span></a>
-        </li>
-        <li class='nav-item'>
-          <a class='nav-link' href='https://my-friend-finder-app27.herokuapp.com/survey'>Survey</a>
-        </li>
-        <li class='nav-item'>
-          <a class='nav-link' href='https://my-friend-finder-app27.herokuapp.com/api/friends'>API Friends List</a>
-        </li>
-        <li class='nav-item'>
-          <a class='nav-link' href='https://github.com/kennedyaustin/FriendFinder'>GitHub Repo</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<nav class='navbar navbar-expand-lg navbar-light bg-light'>
+  <a class='navbar-brand' href='#'>Navbar</a>
+  <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
+    <span class='navbar-toggler-icon'></span>
+  </button>
+  <div class='collapse navbar-collapse' id='navbarNav'>
+    <ul class='navbar-nav ml-auto'>
+      <li class='nav-item active'>
+        <a class='nav-link' href='https://my-friend-finder-app27.herokuapp.com/'>Home <span class='sr-only'>(current)</span></a>
+      </li>
+      <li class='nav-item'>
+        <a class='nav-link' href='https://my-friend-finder-app27.herokuapp.com/survey'>Survey</a>
+      </li>
+      <li class='nav-item'>
+        <a class='nav-link' href='https://my-friend-finder-app27.herokuapp.com/api/friends'>API Friends List</a>
+      </li>
+      <li class='nav-item'>
+        <a class='nav-link' href='https://github.com/kennedyaustin/FriendFinder'>GitHub Repo</a>
+      </li>
+    </ul>
+  </div>
+</nav>
     
-  <div class='container'>
+<div class='container'>
+  <div class='jumbotron'>
+    <h1><i class='fa fa-facebook-square' aria-hidden='true'></i> Friend Finder</h1>
+    <hr>
+    <h2>Answer a few basic questions. </h2>
+    <h2>Then find the friend with the greatest compatibility!</h2>
+    <br>
+    <div>
+      <a href='/survey'><button type='button' class='btn btn-lg btn-primary'><h4><span class='glyphicon glyphicon-list-alt'></span>Go to Survey</h4></button></a>
+    </div>
+</div>
 
-    <div class='jumbotron' style= 'position: absolute; bottom: 0;'>
-      <h1><i class='fa fa-facebook-square' aria-hidden='true'></i> Friend Finder</h1>
-      <hr>
-      <h2>Answer a few basic questions. </h2>
-      <h2>Then find the friend with the greatest compatibility!</h2>
-      <br>
+<!-- Footer gotten from https://mdbootstrap.com/snippets/jquery/mdbootstrap/818764 -->
+<footer class="page-footer font-small purple fixed-bottom" style= 'background-color: #f8f9fa;'>
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
 
-      <div>
-        <a href='/survey'><button type='button' class='btn btn-lg btn-primary'><h4><span class='glyphicon glyphicon-list-alt'></span>Go to Survey</h4></button></a>
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 text-center">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">Friend Finder</h5>
+        <p>Thank you for visiting our app! Please click above to start our survey to
+          find the best matching friend for you.
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 text-center">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://my-friend-finder-app27.herokuapp.com/api/friends">API Friends List</a>
+          </li>
+          <li>
+            <a href="https://github.com/kennedyaustin/FriendFinder">GitHub Repo</a>
+          </li>
+        </ul>
+
       </div>
 
     </div>
 
-  <!-- <footer class='footer'>
-    <div class='container'>
-      <p><a href='/api/friends'>API Friends List</a> | <a href='https://github.com/kennedyaustin/FriendFinder' target= '_blank'>GitHub Repo</a></p>
-    </div>
-  </footer> -->
+  </div>
 
-  <footer class="page-footer font-small purple pt-4 fixed-bottom" style= 'background-color: aqua;'>
-    <!-- Footer Links -->
-    <div class="container-fluid text-center text-md-left">
-  
-      <!-- Grid row -->
-      <div class="row">
-  
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
-  
-          <!-- Content -->
-          <h5 class="text-uppercase">Friend Finder</h5>
-          <p>Thank you for visiting our app! Please click above to start our survey to
-            find the best matching friend for you.
-          </p>
-  
-        </div>
-        <!-- Grid column -->
-  
-        <hr class="clearfix w-100 d-md-none pb-3">
-  
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0">
-  
-          <!-- Links -->
-          <h5 class="text-uppercase">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="https://my-friend-finder-app27.herokuapp.com/api/friends">API Friends List</a>
-            </li>
-            <li>
-              <a href="https://github.com/kennedyaustin/FriendFinder">GitHub Repo</a>
-            </li>
-          </ul>
-  
-        </div>
-        <!-- Grid column -->
-  
-      </div>
-  
-    </div>
-  
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">Austin Kennedy © 2020 Copyright:
-      <a href="https://github.com/kennedyaustin"> My Works</a>
-    </div>
-    <!-- Copyright -->
-  
-  </footer>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center">Austin Kennedy © 2020 Copyright:
+    <a href="https://github.com/kennedyaustin"> My Works</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
 
   </div>
 
