@@ -30,62 +30,45 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.post('/api/friends', function(req, res) {
+
+    // For ease of access to info (friendName, friendphoto, scores)
     let newFriend= req.body 
 
-    // This for loop will turn the responses that are taken from the survey
-    // into actual numbers instead of strings for us to use to calculate the 
-    // difference in choices to match the friends up
+    // Converts the numbers that are in the json friends list from 
+    // string to number values so they can be added/ subtracted
     for (let i = 0; i < newFriend.scores.length; i++) {
 
-      // The if/ else if statements take in the string from the choices 1 and 5 and convert
-      // them into numbers
-      if (newFriend.scores[i] == '1 (Strongly Disagree') {
-
-        newFriend.scores[i]= 1
-
-      } else if (newFriend.scores[i] == '5 (Strongly Agree') {
-
-        newFriend.scores[i]= 5
-
-      } else {
-
-        newFriend.scores[i]= parseInt(newFriend.scores[i])
-
-      }
+      newFriend.scores[i]= parseInt(newFriend.scores[i])
 
     }
 
-    // This for loop is going to loop over the friends that are in the friend.js file
-    // as well as do the math to choose the best friend that will match witht the users
-    // input
-    let comparingFriends= []
+    // This sets up the for loops below to distinguish which friend matches
+    // the best with the user from the answers that they give
+    let bestMatchingFriend
+    let minDiff= 10
+
+    // This for loop will start the user out with 0 difference from the friends listed
+    // It will then add the difference of each number to the totalDif so that the total 
+    // will added up for comparison to the list
     for (let i = 0; i < friendData.length; i++) {
 
-      // Easier access to data from friend.js
-      let friendCompared= friendData[i]
-      // Used to calculate scores between friends on the json page
-      let totalDifference
+      let totalDiff= 0
+      for (let j = 0; j < friendData[i].scores.length; j++) {
 
-      // This loop will take the scores values from each friend in the array and compute the total difference
-      // for each for finding the best friend
-      for (let j = 0; j < friendCompared.scores.length; j++) {
-
-        let differenceOfOneFriend= Math.abs(friendCompared.scores[j] - newFriend.scores[j])
-        totalDifference += differenceOfOneFriend
+        // The difference of the user input from the list of friends already in the 
+        // friends.js file
+        let diff= Math.abs(newFriend.scores[j] - friendData[i].scores[j])
+        totalDiff += diff
 
       }
-      
-      // Each friend will have their total difference put into an array
-      comparingFriends[i]= totalDifference
-    }
+      // If there's a new minDiff change the bestMatchingFriend to the next highest diff
+      // for comparison
+      if (totalDiff < minDiff) {
 
-    // This for loop determines the best matching friend
-    let bestFriend= comparingFriends[0]
-    let friendIndex= 0    
-    for (i = 1; i < comparingFriends.length; i++) {
+        bestMatchingFriend= i
+        minDiff= totalDiff
 
-      bestFriend= comparingFriends[i]
-      friendIndex= i
+      }
 
     }
 
@@ -93,7 +76,7 @@ module.exports = function(app) {
     // in the form of a modal
     // req.body is available since we're using the body parsing middleware
     friendData.push(newFriend)
-    res.json(friendData[friendIndex])
+    res.json(friendData[bestMatchingFriend])
 
   });
 
