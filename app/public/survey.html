@@ -219,11 +219,12 @@
     <!------------------ Javascript for Form ----------------------->
     <script type='text/javascript'>
   
-      // Capture the form inputs
+      // When the submit button is clicked capture the form inputs
       $('#submit').on('click', function(event) {
         event.preventDefault();
   
-        // Form validation
+        // Form validation to make sure that each of the questions are answered as well as the 
+        // name and pic link
         function validateForm() {
           var isValid = true;
           $('.form-control').each(function() {
@@ -243,7 +244,8 @@
   
         // If all required fields are filled
         if (validateForm()) {
-          // Create an object for the user's data
+          // Create an object for the user's data and collect the information that the
+          // user put in for their answers to the questions
           var friendArray = {
             friendName: $('#name').val(),
             friendphoto: $('#photo').val(),

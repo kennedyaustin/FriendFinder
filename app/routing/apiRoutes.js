@@ -37,6 +37,8 @@ module.exports = function(app) {
     // difference in choices to match the friends up
     for (let i = 0; i < newFriend.scores.length; i++) {
 
+      // The if/ else if statements take in the string from the choices 1 and 5 and convert
+      // them into numbers
       if (newFriend.scores[i] == '1 (Strongly Disagree') {
 
         newFriend.scores[i]= 1
@@ -64,6 +66,8 @@ module.exports = function(app) {
       // Used to calculate scores between friends on the json page
       let totalDifference
 
+      // This loop will take the scores values from each friend in the array and compute the total difference
+      // for each for finding the best friend
       for (let j = 0; j < friendCompared.scores.length; j++) {
 
         let differenceOfOneFriend= Math.abs(friendCompared.scores[j] - newFriend.scores[j])
@@ -71,12 +75,13 @@ module.exports = function(app) {
 
       }
       
+      // Each friend will have their total difference put into an array
       comparingFriends[i]= totalDifference
     }
 
+    // This for loop determines the best matching friend
     let bestFriend= comparingFriends[0]
-    let friendIndex= 0
-    
+    let friendIndex= 0    
     for (i = 1; i < comparingFriends.length; i++) {
 
       bestFriend= comparingFriends[i]
@@ -84,8 +89,8 @@ module.exports = function(app) {
 
     }
 
-    // Note the code here. Our 'server' will respond to requests and let users know if they have a table or not.
-    // It will do this by sending out the value 'true' have a table
+    // res.json will send the info of the best matching friend to the survey page
+    // in the form of a modal
     // req.body is available since we're using the body parsing middleware
     friendData.push(newFriend)
     res.json(friendData[friendIndex])
