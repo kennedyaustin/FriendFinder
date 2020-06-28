@@ -1,34 +1,34 @@
 <html lang='en'>
 <head>
-    <meta charset='UTF-8'>
-    <title>FriendFinder</title>
-  
-    <!-- Latest compiled and minified CSS & JS -->
-    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' 
-    integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk' crossorigin='anonymous'>
-    <script src='https://code.jquery.com/jquery.js'></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  
-    <!-- Bootstrap CSS -->
-    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' 
-    integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk' 
-    crossorigin='anonymous'>
-    
-  
+  <meta charset='UTF-8'>
+  <title>FriendFinder</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' 
+  integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk' crossorigin='anonymous'>
+  <script src='https://code.jquery.com/jquery.js'></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' 
+  integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk' 
+  crossorigin='anonymous'>
 </head>
 
 <body>
-  <style>
-    a {
-      color:#4EB1BA;
-    }
-    .myNav {
-      background-color: #222930 !important;
-      color: #4EB1BA !important;
-    }
-  </style>
 
+<style>
+  a {
+    color:#4EB1BA;
+  }
+  .myNav {
+    background-color: #222930 !important;
+    color: #4EB1BA !important;
+  }
+</style>
+
+<!------- Navbar ------->
 <nav class='myNav navbar navbar-expand-lg navbar-dark bg-light'>
   <a class='myNav navbar-brand' href='https://my-friend-finder-app27.herokuapp.com/'>
     <!-- Got embed from https://iconmonstr.com/facebook-6-svg/ -->
@@ -39,24 +39,26 @@
   <button class='myNav navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
     <span class='navbar-toggler-icon'></span>
   </button>
+  <!------- Links ------->
   <div class='collapse navbar-collapse' id='navbarNav'>
     <ul class='navbar-nav ml-auto'>
       <li class='nav-item active'>
-        <a class='myNav nav-link' href='https://my-friend-finder-app27.herokuapp.com/'>Home <span class='sr-only'>(current)</span></a>
+        <a class='myNav nav-link' href='/'>Home <span class='sr-only'>(current)</span></a>
       </li>
       <li class='nav-item'>
-        <a class='myNav nav-link' href='https://my-friend-finder-app27.herokuapp.com/survey'>Survey</a>
+        <a class='myNav nav-link' href='/survey'>Survey</a>
       </li>
       <li class='nav-item'>
-        <a class='myNav nav-link' href='https://my-friend-finder-app27.herokuapp.com/api/friends'>API Friends List</a>
+        <a class='myNav nav-link' href='/api/friends'>API Friends List</a>
       </li>
       <li class='nav-item'>
-        <a class='myNav nav-link' href='https://github.com/kennedyaustin/FriendFinder'>GitHub Repo</a>
+        <a class='myNav nav-link' href='https://github.com/kennedyaustin/FriendFinder' target= '_blank'>GitHub Repo</a>
       </li>
     </ul>
   </div>
 </nav>
     
+<!-- Jumbotron for intro/survey button -->
 <div class='container'>
   <div class='jumbotron' style= 'height: 350px; margin-top: 30px; background-color: #222930; color: #4EB1BA;'>
     <h1><i class='fa fa-facebook-square' aria-hidden='true'></i> Friend Finder</h1>
@@ -101,7 +103,7 @@
             <a href="https://my-friend-finder-app27.herokuapp.com/api/friends">API Friends List</a>
           </li>
           <li>
-            <a href="https://github.com/kennedyaustin/FriendFinder">GitHub Repo</a>
+            <a href="https://github.com/kennedyaustin/FriendFinder" target= '_blank'>GitHub Repo</a>
           </li>
         </ul>
 
@@ -118,11 +120,6 @@
   <!-- Copyright -->
 
 </footer>
-
-  </div>
-
-
-
 
 </body>
 
