@@ -30,8 +30,7 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.post('/api/friends', function(req, res) {
-
-    let newFriend= req.body
+    let newFriend= req.body 
 
     // This for loop will turn the responses that are taken from the survey
     // into actual numbers instead of strings for us to use to calculate the 
@@ -57,25 +56,39 @@ module.exports = function(app) {
     // This for loop is going to loop over the friends that are in the friend.js file
     // as well as do the math to choose the best friend that will match witht the users
     // input
+    let comparingFriends= []
     for (let i = 0; i < friendData.length; i++) {
 
+      // Easier access to data from friend.js
       let friendCompared= friendData[i]
+      // Used to calculate scores between friends on the json page
       let totalDifference
 
-      for (let j = 0; j < friendCompared.scores.length; k++) {
+      for (let j = 0; j < friendCompared.scores.length; j++) {
 
+        let differenceOfOneFriend= Math.abs(friendCompared.scores[j] - newFriend.scores[j])
+        totalDifference += differenceOfOneFriend
 
-        
       }
+      
+      comparingFriends[i]= totalDifference
+    }
+
+    let bestFriend= comparingFriends[0]
+    let friendIndex= 0
+    
+    for (i = 1; i < comparingFriends.length; i++) {
+
+      bestFriend= comparingFriends[i]
+      friendIndex= i
 
     }
 
-    
     // Note the code here. Our 'server' will respond to requests and let users know if they have a table or not.
     // It will do this by sending out the value 'true' have a table
     // req.body is available since we're using the body parsing middleware
-    friendData.push(req.body)
-    res.json(true)
+    friendData.push(newFriend)
+    res.json(friendData[friendIndex])
 
   });
 
