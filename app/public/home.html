@@ -21,37 +21,46 @@
 <body>
   <style>
     a {
-      color:#212529;
+      color:#4EB1BA;
+    }
+    .myNav {
+      background-color: #222930 !important;
+      color: #4EB1BA !important;
     }
   </style>
 
-<nav class='navbar navbar-expand-lg navbar-light bg-light'>
-  <a class='navbar-brand' href='#'>Friend Finder</a>
-  <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
+<nav class='myNav navbar navbar-expand-lg navbar-dark bg-light'>
+  <a class='myNav navbar-brand' href='https://my-friend-finder-app27.herokuapp.com/'>
+    <!-- Got embed from https://iconmonstr.com/facebook-6-svg/ -->
+    <svg style= 'background-color:white; border: 1px solid white' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+    Friend Finder
+  </a>
+  <button class='myNav navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
     <span class='navbar-toggler-icon'></span>
   </button>
   <div class='collapse navbar-collapse' id='navbarNav'>
     <ul class='navbar-nav ml-auto'>
       <li class='nav-item active'>
-        <a class='nav-link' href='https://my-friend-finder-app27.herokuapp.com/'>Home <span class='sr-only'>(current)</span></a>
+        <a class='myNav nav-link' href='https://my-friend-finder-app27.herokuapp.com/'>Home <span class='sr-only'>(current)</span></a>
       </li>
       <li class='nav-item'>
-        <a class='nav-link' href='https://my-friend-finder-app27.herokuapp.com/survey'>Survey</a>
+        <a class='myNav nav-link' href='https://my-friend-finder-app27.herokuapp.com/survey'>Survey</a>
       </li>
       <li class='nav-item'>
-        <a class='nav-link' href='https://my-friend-finder-app27.herokuapp.com/api/friends'>API Friends List</a>
+        <a class='myNav nav-link' href='https://my-friend-finder-app27.herokuapp.com/api/friends'>API Friends List</a>
       </li>
       <li class='nav-item'>
-        <a class='nav-link' href='https://github.com/kennedyaustin/FriendFinder'>GitHub Repo</a>
+        <a class='myNav nav-link' href='https://github.com/kennedyaustin/FriendFinder'>GitHub Repo</a>
       </li>
     </ul>
   </div>
 </nav>
     
 <div class='container'>
-  <div class='jumbotron' style= 'height: 350px; margin-top: 30px; background-color: #f8f9fa;'>
+  <div class='jumbotron' style= 'height: 350px; margin-top: 30px; background-color: #222930; color: #4EB1BA;'>
     <h1><i class='fa fa-facebook-square' aria-hidden='true'></i> Friend Finder</h1>
-    <hr>
+    <hr style= 'background-color: #4EB1BA'>
     <h2>Answer a few basic questions. </h2>
     <h2>Then find the friend with the greatest compatibility!</h2>
     <div>
@@ -60,7 +69,7 @@
 </div>
 
 <!-- Footer gotten from https://mdbootstrap.com/snippets/jquery/mdbootstrap/818764 -->
-<footer class="page-footer font-small purple fixed-bottom" style= 'background-color: #f8f9fa;'>
+<footer class="page-footer font-small purple fixed-bottom" style= 'background-color: #222930; color: #4EB1BA;'>
   <!-- Footer Links -->
   <div class="container-fluid text-center text-md-left">
 
@@ -103,8 +112,8 @@
   </div>
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center">Austin Kennedy © 2020 Copyright:
-    <a href="https://github.com/kennedyaustin"> My Works</a>
+  <div class="footer-copyright text-center" style= 'color:white;'>Austin Kennedy © 2020 Copyright:
+    <a href="https://github.com/kennedyaustin" style= 'color: white;'> My Works</a>
   </div>
   <!-- Copyright -->
 
