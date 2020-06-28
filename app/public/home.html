@@ -4,20 +4,47 @@
     <title>FriendFinder</title>
   
     <!-- Latest compiled and minified CSS & JS -->
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' 
+    integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk' crossorigin='anonymous'>
     <script src='https://code.jquery.com/jquery.js'></script>
-    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   
-    <!-- Font Awesome Glyphicons -->
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'>
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' 
+    integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk' 
+    crossorigin='anonymous'>
   
 </head>
 
 <body>
+
+  <nav class='navbar navbar-expand-lg navbar-light bg-light'>
+    <a class='navbar-brand' href='#'>Navbar</a>
+    <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
+      <span class='navbar-toggler-icon'></span>
+    </button>
+    <div class='collapse navbar-collapse' id='navbarNav'>
+      <ul class='navbar-nav ml-auto'>
+        <li class='nav-item active'>
+          <a class='nav-link' href='https://my-friend-finder-app27.herokuapp.com/'>Home <span class='sr-only'>(current)</span></a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='https://my-friend-finder-app27.herokuapp.com/survey'>Survey</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='https://my-friend-finder-app27.herokuapp.com/api/friends'>API Friends List</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='https://github.com/kennedyaustin/FriendFinder'>GitHub Repo</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
     
   <div class='container'>
 
-    <div class='jumbotron'>
+    <div class='jumbotron' style= 'position: absolute; bottom: 0;'>
       <h1><i class='fa fa-facebook-square' aria-hidden='true'></i> Friend Finder</h1>
       <hr>
       <h2>Answer a few basic questions. </h2>
@@ -25,16 +52,67 @@
       <br>
 
       <div>
-        <a href='/survey'><button type='button' class='btn btn-lg btn-primary'><h4><span class='glyphicon glyphicon-list-alt'></span> Go to Survey</h4></button></a>
+        <a href='/survey'><button type='button' class='btn btn-lg btn-primary'><h4><span class='glyphicon glyphicon-list-alt'></span>Go to Survey</h4></button></a>
       </div>
 
     </div>
 
-    <footer class='footer'>
-      <div class='container'>
-        <p><a href='/api/friends'>API Friends List</a> | <a href='https://github.com/kennedyaustin/FriendFinder'>GitHub Repo</a></p>
+  <!-- <footer class='footer'>
+    <div class='container'>
+      <p><a href='/api/friends'>API Friends List</a> | <a href='https://github.com/kennedyaustin/FriendFinder' target= '_blank'>GitHub Repo</a></p>
+    </div>
+  </footer> -->
+
+  <footer class="page-footer font-small purple pt-4 fixed-bottom" style= 'background-color: aqua;'>
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+  
+          <!-- Content -->
+          <h5 class="text-uppercase">Friend Finder</h5>
+          <p>Thank you for visiting our app! Please click above to start our survey to
+            find the best matching friend for you.
+          </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none pb-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0">
+  
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://my-friend-finder-app27.herokuapp.com/api/friends">API Friends List</a>
+            </li>
+            <li>
+              <a href="https://github.com/kennedyaustin/FriendFinder">GitHub Repo</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
       </div>
-    </footer>
+  
+    </div>
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">Austin Kennedy © 2020 Copyright:
+      <a href="https://github.com/kennedyaustin"> My Works</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
 
   </div>
 
