@@ -25,5 +25,5 @@ In this project, a compatibility-based "FriendFinder" application was created. T
 ● After the user has filled in everything on the page and the submit button is clicked, a modal will pop up showing them the friend inside of the API Friends List that best corresponds to their answers. <br>
 ![](FF_SS/bestmodalpopup.png) <br><br>
 
-● Also, after the user has clicked the submit button, the information that they provided will be populated to the API Friends List page, but there is no storage so when the webpage is closed out and reopened the users data will not be present in the list anymore. <br>
+● Also, after the user has clicked the submit button, the information that they provided will be populated to the API Friends List page. <br>
 ![](FF_SS/jsonFriendlist.png) <br>
