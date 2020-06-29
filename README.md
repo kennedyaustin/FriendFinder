@@ -10,7 +10,7 @@ In this project, a compatibility-based "FriendFinder" application was created. T
 ● Express- allows the ease of diverting users to different parts of the website based on the request that is made.<br>
 ● Path- so that paths can be easily made to the apis.<br>
     -The user will not have to install any of these packages if they go through Heroku, though if the server.js file is used, the Express package will be required to be installed in order to run the server. <br>
-    -After the user has installed the Express package, they should run the <b>server.js</b> file in the terminal and type <b>'npm run watch'</b> and the hold <b>ctrl</b> as they <b>click</b> on the link that is shown in the terminal.
+    -After the user has installed the Express package, they should run the <b>server.js</b> file in the terminal. The user should then type <b>'npm run watch'</b> and hold <b>ctrl</b> as they <b>click</b> on the link that is shown in the terminal.
 
 # How It Works
 
