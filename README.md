@@ -9,7 +9,7 @@ In this project, a compatibility-based "FriendFinder" application was created. T
 # Used/ Required Packages
 ● Express- allows the ease of diverting users to different parts of the website based on the request that is made.<br>
 ● Path- so that paths can be easily made to the apis.<br>
-    -The user will not have to install any of these packages if they go through Hiroku, though if the server.js file is used, the Express package will be required to be installed in order to run the server.
+    -The user will not have to install any of these packages if they go through Heroku, though if the server.js file is used, the Express package will be required to be installed in order to run the server.
 
 # How It Works
 
