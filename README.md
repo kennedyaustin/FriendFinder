@@ -9,4 +9,4 @@ In this project, a compatibility-based "FriendFinder" application was created. T
 # How It Works
 
 ● The user will be brought to the home page where they will have the option of either clicking on the <b>"Go to Survey"</b> button, or on the navbar to access the survey that they will be participating in. <br>
-![](FF_SS/home.png) <br>
+![](FF_SS/homepage.png) <br>
